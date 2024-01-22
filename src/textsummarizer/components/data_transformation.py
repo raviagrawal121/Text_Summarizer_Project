@@ -24,4 +24,4 @@ class DataTransformation:
     def convert(self):
         datasets = load_from_disk(self.config.data_path)
         datasets_pt = datasets.map(self.convert_examples_to_features,batched=True)
-        datasets_pt.save_to_disk(os.path.join(self.config.root_dir,"dataset"))
+        datasets_pt.save_to_disk(os.path.join(self.config.root_dir,"samsum_dataset"))
